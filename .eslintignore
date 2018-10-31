@@ -1,0 +1,7 @@
+/test
+bower_components/
+build/
+node_modules/
+*.log
+package-lock.json
+analysis.json

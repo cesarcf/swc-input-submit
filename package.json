@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "analyze": "polymer analyze swc-input-submit.html > analysis.json",
+    "lint": "npm run lint:javascript && polymer lint",
+    "lint:javascript": "eslint . --ext js,html"
+  },
+  "name": "swc-input-submit",
+  "description": "Sopra Web Component input submit",
+  "version": "0.1.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-html": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@innersource.soprasteria.com:smartup/frontend/core-components/swc-input-submit.git"
+  },
+  "keywords": [
+    "polymer"
+  ],
+  "author": "SmartUp Sopra Team",
+  "license": "ISC"
+}
