@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+		<title>swc-input-submit test</title>
+
+		<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+		<script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
+		<script src="../node_modules/mocha/mocha.js"></script>
+		<script src="../node_modules/chai/chai.js"></script>
+		<script src="../node_modules/wct-mocha/wct-mocha.js"></script>
+
+		<script type="module" src="../swc-input-submit.js"></script>
+	</head>
+	<body>
+
+		<test-fixture id="BasicTestFixture">
+			<template>
+				<swc-input-submit></swc-input-submit>
+			</template>
+		</test-fixture>
+
+		<script type="module">
+
+			suite('template test example', function(){
+				var element = fixture("BasicTestFixture")
+
+				test('testing local DOM example', function(){
+					var h2 = element.shadowRoot.querySelector('h2')
+
+					assert.isNotNull(h2, 'no funciona!')
+					assert.equal(h2.innerText, 'Hello SwcInputSubmit!')
+				})
+			})
+		</script>
+
+	</body>
+</html>

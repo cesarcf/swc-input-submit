@@ -1,0 +1,18 @@
+{
+	"extends": ["google"],
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"max-len": ["error", { "ignoreComments": true, "code": 100 }],
+		"indent": [2, "tab"],
+		"no-tabs": 0
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	},
+	"globals": {
+		"window": true
+	}
+}

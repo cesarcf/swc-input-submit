@@ -1,0 +1,118 @@
+{
+	"schema_version": "1.0.0",
+	"elements": [
+		{
+			"description": "'swc-input-submit'",
+			"summary": "",
+			"path": "swc-input-submit.js",
+			"properties": [],
+			"methods": [
+				{
+					"name": "render",
+					"description": "",
+					"privacy": "public",
+					"sourceRange": {
+						"start": {
+							"line": 24,
+							"column": 1
+						},
+						"end": {
+							"line": 33,
+							"column": 2
+						}
+					},
+					"metadata": {},
+					"params": [],
+					"return": {
+						"type": "String"
+					}
+				}
+			],
+			"staticMethods": [],
+			"demos": [
+				{
+					"url": "/demo",
+					"description": ""
+				}
+			],
+			"metadata": {},
+			"sourceRange": {
+				"start": {
+					"line": 10,
+					"column": 0
+				},
+				"end": {
+					"line": 34,
+					"column": 1
+				}
+			},
+			"privacy": "public",
+			"superclass": "HTMLElement",
+			"name": "SwcInputSubmit",
+			"attributes": [],
+			"events": [],
+			"styling": {
+				"cssVariables": [],
+				"selectors": []
+			},
+			"slots": [],
+			"tagname": "swc-input-submit"
+		},
+		{
+			"description": "'swc-input-submit'",
+			"summary": "",
+			"path": "swc-input-submit.js",
+			"properties": [],
+			"methods": [
+				{
+					"name": "render",
+					"description": "",
+					"privacy": "public",
+					"sourceRange": {
+						"start": {
+							"line": 24,
+							"column": 1
+						},
+						"end": {
+							"line": 33,
+							"column": 2
+						}
+					},
+					"metadata": {},
+					"params": [],
+					"return": {
+						"type": "String"
+					},
+					"inheritedFrom": "SwcInputSubmit"
+				}
+			],
+			"staticMethods": [],
+			"demos": [
+				{
+					"url": "/demo",
+					"description": ""
+				}
+			],
+			"metadata": {},
+			"sourceRange": {
+				"start": {
+					"line": 10,
+					"column": 30
+				},
+				"end": {
+					"line": 10,
+					"column": 57
+				}
+			},
+			"privacy": "public",
+			"superclass": "LitElement",
+			"attributes": [],
+			"events": [],
+			"styling": {
+				"cssVariables": [],
+				"selectors": []
+			},
+			"slots": []
+		}
+	]
+}
