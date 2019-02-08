@@ -1,32 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>swc-input-submit demo</title>
+		<title>swc-input-submit demo</title>
 
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+		<script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <script type="module">
-      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-      import '@polymer/iron-demo-helpers/demo-snippet';
-      import '../swc-input-submit.js';
-    </script>
+		<script type="module">
+			import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+			import '@polymer/iron-demo-helpers/demo-snippet';
+			import '../swc-input-submit.js';
+		</script>
 
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
-    </custom-style>
-  </head>
-  <body>
-    <div class="vertical-section-container centered">
-      <h3>Basic swc-input-submit demo</h3>
-      <demo-snippet>
-        <template>
-          <swc-input-submit></swc-input-submit>
-        </template>
-      </demo-snippet>
-    </div>
-  </body>
+		<custom-style>
+			<style is="custom-style" include="demo-pages-shared-styles">
+				.any-swc-input {
+					--swc-input-submit-wrapper: {
+						height: 40px;
+					}
+					--swc-input-submit-button-disabled: {
+						background-color: gray;
+						color: white;
+					}
+					--swc-input-submit-button: {
+						background-color: orange;
+						color: green;
+						width: auto;
+					};
+					--swc-input-submit-input: {
+						width: 300px;
+						font-size: 14px;
+					}
+				}
+			</style>
+		</custom-style>
+	</head>
+	<body>
+		<div class="vertical-section-container centered">
+			<h3>Basic swc-input-submit demo</h3>
+			<demo-snippet>
+				<template>
+					<swc-input-submit></swc-input-submit>
+				</template>
+			</demo-snippet>
+		</div>
+
+		<div class="vertical-section-container centered child">
+			<h3>swc-input-submit disabled</h3>
+			<demo-snippet>
+				<template>
+					<swc-input-submit disabled buttonlabel="Submit"></swc-input-submit>
+				</template>
+			</demo-snippet>
+		</div>
+
+		<div class="vertical-section-container centered child">
+			<h3>swc-input-submit with Regular Expression </h3>
+			<demo-snippet>
+				<template>
+					<swc-input-submit
+						placeholder="Only numbers"
+						buttonlabel="Submit"
+						regexp="^[0-9]+$">
+					</swc-input-submit>
+				</template>
+			</demo-snippet>
+		</div>
+
+		<div class="vertical-section-container centered">
+				<h3>Basic swc-input-submit usin mixins</h3>
+				<demo-snippet>
+					<template>
+						<swc-input-submit class="any-swc-input"></swc-input-submit>
+					</template>
+				</demo-snippet>
+			</div>
+
+		<div class="vertical-section-container centered child">
+			<h3>swc-input-submit with customized event</h3>
+			<demo-snippet>
+				<template>
+					<swc-input-submit
+						placeholder="Some Value"
+						buttonlabel="Submit"
+						eventname="event-example">
+					</swc-input-submit>
+					<p>
+						<span>Expected value: </span><span id="value"></span>
+					</p>
+				</template>
+			</demo-snippet>
+		</div>
+
+		<script>
+			document.addEventListener('event-example', (event) => {
+				document.getElementById('value').innerHTML = event.detail.value;
+			}, true);
+		</script>
+	</body>
 </html>

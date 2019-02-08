@@ -1,11 +1,13 @@
 {
 	"name": "swc-input-submit",
+	"description": "Sopra Web Component input submit",
 	"version": "0.0.1",
+	"main": "swc-input-submit.js",
 	"scripts": {
 		"test": "mocha",
 		"build": "webpack -p",
-		"doc": "polymer analyze > analysis.json",
-		"lint": "eslint ./lit-anything-finder.js --fix"
+		"doc": "polymer analyze swc-input-submit.js > analysis.json",
+		"lint": "eslint ./swc-input-submit.js --fix"
 	},
 	"dependencies": {
 		"lit-element": "^2.0.1"
@@ -22,5 +24,14 @@
 		"wct-mocha": "^1.0.0",
 		"webpack": "^4.29.1",
 		"webpack-cli": "^3.2.3"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@innersource.soprasteria.com:smartup/frontend/core-components/swc-input-submit.git"
+	},
+	"keywords": [
+		"polymer"
+	],
+	"author": "SmartUp Sopra Team",
+	"license": "ISC"
 }
